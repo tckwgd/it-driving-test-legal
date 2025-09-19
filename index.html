@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Driving Test - Prepare for Your Italian Driving License</title>
+    <title>IT Driving Test - Italian Driving License Exam Preparation</title>
     <style>
         * {
             margin: 0;
@@ -107,56 +107,93 @@
             text-decoration: none;
             margin: 0 10px;
         }
+
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .language-selector select {
+            padding: 8px 12px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 14px;
+            background: white;
+            color: #333;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
+    <div class="language-selector">
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+            <option value="en">🇬🇧 English</option>
+            <option value="it">🇮🇹 Italiano</option>
+            <option value="zh">🇨🇳 中文</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="ar">🇸🇦 العربية</option>
+            <option value="ru">🇷🇺 Русский</option>
+            <option value="sq">🇦🇱 Shqip</option>
+        </select>
+    </div>
+
     <div class="container">
         <div class="card">
             <div class="logo">
-                <h1>🚗 IT Driving Test</h1>
+                <h1>🚗 <span data-i18n="app-title">IT Driving Test</span></h1>
             </div>
 
-            <p style="text-align: center; font-size: 1.2em; margin-bottom: 30px;">
+            <p style="text-align: center; font-size: 1.2em; margin-bottom: 30px;" data-i18n="app-description">
                 The complete app to prepare for your Italian driving license exam
             </p>
 
-            <h2>Features</h2>
+            <h2 data-i18n="features">Features</h2>
             <div class="features">
                 <div class="feature">
-                    <h3>📚 9,353 Official Questions</h3>
-                    <p>Complete database of official Italian driving test questions with translations in 9 languages</p>
+                    <h3>📚 <span data-i18n="feature-1-title">9,353 Official Questions</span></h3>
+                    <p data-i18n="feature-1-desc">Complete database of official Italian driving test questions with translations in 9 languages</p>
                 </div>
 
                 <div class="feature">
-                    <h3>🌍 Multilingual Support</h3>
-                    <p>Available in Italian, English, Chinese, Spanish, French, German, Arabic, Russian, and Albanian</p>
+                    <h3>🌍 <span data-i18n="feature-2-title">Multilingual Support</span></h3>
+                    <p data-i18n="feature-2-desc">Available in Italian, English, Chinese, Spanish, French, German, Arabic, Russian, and Albanian</p>
                 </div>
 
                 <div class="feature">
-                    <h3>📝 Practice & Test Modes</h3>
-                    <p>Practice by category or difficulty, then test yourself with realistic exam simulations</p>
+                    <h3>📝 <span data-i18n="feature-3-title">Practice & Test Modes</span></h3>
+                    <p data-i18n="feature-3-desc">Practice by category or difficulty, then test yourself with realistic exam simulations</p>
                 </div>
 
                 <div class="feature">
-                    <h3>📊 Progress Tracking</h3>
-                    <p>Track your performance, review wrong answers, and focus on challenging topics</p>
+                    <h3>📊 <span data-i18n="feature-4-title">Progress Tracking</span></h3>
+                    <p data-i18n="feature-4-desc">Track your performance, review wrong answers, and focus on challenging topics</p>
                 </div>
             </div>
 
             <div class="links">
-                <a href="privacy-policy.html" class="button">Privacy Policy</a>
-                <a href="terms-of-service.html" class="button">Terms of Service</a>
+                <a href="privacy-policy.html" class="button" data-i18n="privacy-policy">Privacy Policy</a>
+                <a href="terms-of-service.html" class="button" data-i18n="terms-of-service">Terms of Service</a>
             </div>
         </div>
 
         <footer>
-            <p>© 2025 IT Driving Test. All rights reserved.</p>
+            <p>© 2025 IT Driving Test. <span data-i18n="all-rights">All rights reserved.</span></p>
             <p>
-                <a href="mailto:support@driving-test.app">Contact Support</a> |
-                <a href="privacy-policy.html">Privacy</a> |
-                <a href="terms-of-service.html">Terms</a>
+                <a href="mailto:support@driving-test.app" data-i18n="contact-support">Contact Support</a> |
+                <a href="privacy-policy.html" data-i18n="privacy">Privacy</a> |
+                <a href="terms-of-service.html" data-i18n="terms">Terms</a>
             </p>
         </footer>
     </div>
+
+    <script src="js/translations.js"></script>
 </body>
 </html>
